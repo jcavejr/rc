@@ -1,0 +1,12 @@
+alias ll="ls -lart"
+alias gs="git status"
+alias gc="git commit"
+
+function cdr() {
+    dir="${HOME}/repos"
+    if [[ -d $1 ]]; then
+        dir="${dir}/${1}"
+    fi
+    cd $dir
+}
+
