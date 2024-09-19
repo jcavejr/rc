@@ -1,5 +1,5 @@
 # rc
-My personal config files - .vimrc, .zhsrc, etc.
+My personal config files - init.vim, .zhsrc, etc.
 
 ## Installation
 To install the config files, run:
