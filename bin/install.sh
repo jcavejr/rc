@@ -13,6 +13,11 @@ function main() {
     user_rc_dir=${HOME}/.zsh
     mkdir -pv ${user_rc_dir}
     ln -sfv ${rc_repo_dir}/shell_aliases ${user_rc_dir}/shell_aliases
+    ln -sfv ${rc_repo_dir}/tmux.conf ${HOME}/.tmux.conf
+
+    nvim_conf_dir=${HOME}/.config/nvim
+    mkdir -p $nvim_conf_dir
+    ln -sfv ${rc_repo_dir}/init.vim ${nvim_conf_dir}/init.vim
 }
 
 main "$@"
