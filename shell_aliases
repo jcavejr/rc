@@ -4,6 +4,8 @@ alias s="source ~/.zshrc"
 alias ealias="$EDITOR $HOME/.zsh/shell_aliases"
 
 # Git
+alias g="git"
+alias ga="git add"
 alias gs="git status"
 alias gc="git commit"
 alias gd="git diff"
@@ -16,3 +18,5 @@ function cdr() {
     cd $dir
 }
 
+alias tfp="terraform plan -out=changes.tfplan"
+alias tfa="terraform apply changes.tfplan"
