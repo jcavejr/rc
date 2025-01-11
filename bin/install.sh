@@ -10,7 +10,14 @@ function main() {
     cd ${cwd}
     echo "Installing rc repository from ${rc_repo_dir}"
 
-    user_rc_dir=${HOME}/.zsh
+    if [ $(uname -s) == "Linux" ]; then
+	user_rc_dir=${HOME}/.config
+    elif [ $(uname -s) == "Darwin" ]; then
+	user_rc_dir=${HOME}/.zsh
+    else
+	echo "Error: uname -s is neither Linux or Darwin - undefined behavior"
+	exit 1
+    fi
     mkdir -pv ${user_rc_dir}
     ln -sfv ${rc_repo_dir}/shell_aliases ${user_rc_dir}/shell_aliases
     ln -sfv ${rc_repo_dir}/tmux.conf ${HOME}/.tmux.conf
